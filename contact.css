@@ -1,0 +1,137 @@
+nav a {
+    border: 1px solid rgb(126, 127, 127);
+}
+
+nav a:hover {
+    box-shadow: 0 0 15px rgb(100, 101, 101),
+                0 0 30px rgb(101, 101, 101);
+}
+
+/* =======================
+   RESET & BASE
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+}
+
+
+/* =======================
+   HEADER
+======================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #00eaff;
+    letter-spacing: 2px;
+    transition: 0,3 ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+    color: whitesmoke;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00eaff;
+}
+/* =======================
+    CONTACT
+=======================*/
+
+
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.contact h2 {
+    color: cyan;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-top: 20px;
+    padding: 25px;
+    border: 1px solid cyan;
+    border-radius: 12px;
+    background: rgba(0, 255, 255, 0.05);
+    display: inline-block;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+
+/* Animation apparition */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation flottante */
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.contact-info i {
+    color: cyan;
+    margin-right: 10px;
+}
+
+.contact-info:hover {
+    box-shadow: 0 0 20px cyan,
+                0 0 40px cyan;
+    transform: scale(1.03);
+    transition: 0.3s;
+}

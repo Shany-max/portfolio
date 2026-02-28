@@ -1,0 +1,199 @@
+nav a {
+    border: 1px solid rgb(123, 132, 132);
+}
+
+nav a:hover {
+    box-shadow: 0 0 15px rgb(92, 93, 93),
+                0 0 30px rgb(106, 107, 107);
+}
+
+/* =======================
+   RESET & BASE
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #00eaff;
+    letter-spacing: 2px;
+    transition: 0,3 ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+    color: whitesmoke;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00eaff;
+}
+
+/* =======================
+   HOME SECTION
+======================= */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 140px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+/* =======================
+   PROFILE IMAGE
+======================= */
+
+
+.photo-profils img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 0x solid #00eaff;
+    margin-bottom: 20px;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* =======================
+   TEXT
+======================= */
+.photo-profils h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.photo-profils h1 span {
+    color: #00eaff;
+}
+
+.typing-text {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.typing-text span {
+    color: #00eaff;
+}
+
+.photo-profils p {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* =======================
+   SOCIAL ICONS
+======================= */
+.social.icons {
+    margin-top: 25px;
+}
+
+.social.icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #00eaff;
+    color: #00eaff;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.social.icons a:hover {
+    background: #00eaff;
+    color: #000;
+    transform: translateY(-6px) scale(1.1);
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+    .photo-profils h1 {
+        font-size: 32px;
+    }
+
+    .typing-text {
+        font-size: 18px;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+
+
